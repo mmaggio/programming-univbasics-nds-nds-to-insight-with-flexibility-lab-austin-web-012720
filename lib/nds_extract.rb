@@ -76,15 +76,15 @@ def gross_per_studio(collection)
   puts "================================================================="
   puts collection.inspect
   new_hash = {}
-  num_movies = 0
+  index = 0
   
-  while num_movies < collection.length do
-    if !collection[num_movies][:studio]
-      new_hash[collection[num_movies][:studio]] = collection[num_movies][:worldwide_gross]
+  while index < collection.length do
+    if !new_hash[collection[index][:studio]
+      new_hash[collection[index][:studio]] = collection[index][:worldwide_gross]
     else
-      new_hash[collection[num_movies][:studio]] += collection[num_movies][:worldwide_gross]
+      new_hash[collection[index][:studio]] += collection[index][:worldwide_gross]
     end
-    num_movies += 1
+    index += 1
   end
   new_hash
 end
